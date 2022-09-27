@@ -27,13 +27,9 @@ class GlobalRepo {
         print(e.toString());
       }
     } else {
-      try {
-        result = await _apiProvider.getUserPostsFromApi(userId);
-        await _hiveProvider.addBoxes(result, boxName);
-        print('Посты с сервера');
-      } catch (e) {
-        print(e.toString());
-      }
+      result = await _apiProvider.getUserPostsFromApi(userId);
+      await _hiveProvider.addBoxes(result, boxName);
+      print('Посты с сервера');
     }
     return result;
     //await _apiProvider.getUserPostsFromApi(userId);
@@ -54,13 +50,9 @@ class GlobalRepo {
         print(e.toString());
       }
     } else {
-      try {
-        result = await _apiProvider.getUsersFromApi();
-        await _hiveProvider.addBoxes(result, boxName);
-        print('Данные с сервера');
-      } catch (e) {
-        print(e.toString());
-      }
+      result = await _apiProvider.getUsersFromApi();
+      await _hiveProvider.addBoxes(result, boxName);
+      print('Данные с сервера');
     }
     return result;
   }
@@ -80,13 +72,9 @@ class GlobalRepo {
         print(e.toString());
       }
     } else {
-      try {
-        result = await _apiProvider.getPostCommentsFromApi(postId);
-        await _hiveProvider.addBoxes(result, boxName);
-        print('Комменты с сервера');
-      } catch (e) {
-        print(e.toString());
-      }
+      result = await _apiProvider.getPostCommentsFromApi(postId);
+      await _hiveProvider.addBoxes(result, boxName);
+      print('Комменты с сервера');
     }
     return result;
   }
@@ -106,13 +94,9 @@ class GlobalRepo {
         print(e.toString());
       }
     } else {
-      try {
-        result = await _apiProvider.getUserAlbums(userId);
-        await _hiveProvider.addBoxes(result, boxName);
-        print('Альбомы с сервера');
-      } catch (e) {
-        print(e.toString());
-      }
+      result = await _apiProvider.getUserAlbums(userId);
+      await _hiveProvider.addBoxes(result, boxName);
+      print('Альбомы с сервера');
     }
     return result;
   }
@@ -132,13 +116,9 @@ class GlobalRepo {
         print(e.toString());
       }
     } else {
-      try {
-        result = await _apiProvider.getAlbumPhotos(albumId);
-        await _hiveProvider.addBoxes(result, boxName);
-        print('Фото в Альбомы с сервера');
-      } catch (e) {
-        print(e.toString());
-      }
+      result = await _apiProvider.getAlbumPhotos(albumId);
+      await _hiveProvider.addBoxes(result, boxName);
+      print('Фото в Альбомы с сервера');
     }
     return result;
   }
